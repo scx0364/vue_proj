@@ -9,6 +9,8 @@ const htmlPlugin = new HtmlPlugin({
 const { CleanWebpackPlugin } = require('clean-webpack-plugin') // const后面的花括号表示解构赋值
 module.exports = {
     mode: 'development',
+    devtool: 'eval-source-map', // 开发环境下的配置
+    // devtool: 'nosources-source-map', // 发布环境下配置，或者直接取消devtool的配置
 
     // entry: path.join(__dirname,'./src/index.js'), // 打包的入口文件（我们写源代码的地方）
     output: {
